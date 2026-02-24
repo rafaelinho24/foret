@@ -144,20 +144,20 @@ export const slides: Slide[] = [
         kind: 'acts',
         items: [
           {
-            title: 'Acte 1 — Arrivée & mystère',
-            text: 'Les personnalités débarquent dans une forêt inconnue. Elles reçoivent un objet ou un indice physique dont elles ne comprennent pas encore la signification.',
+            title: 'Acte 1 — Arrivée',
+            text: "Les candidats débarquent dans la forêt d'un canton romand. Découverte du terrain, du forestier local et du savoir qu'ils vont apprendre.",
           },
           {
             title: "Acte 2 — L'enseignement",
-            text: 'Le forestier local prend les commandes. Il enseigne un savoir réel — une technique, une lecture du terrain, un geste du métier. Pas une conférence. Une immersion.',
+            text: 'Le forestier local prend les commandes. Il enseigne un vrai savoir du métier — abattage, débardage, lecture du terrain, gestion de la biodiversité, protection contre les risques. Pas une conférence. Une immersion réelle.',
           },
           {
-            title: "Acte 3 — L'épreuve",
-            text: "Le savoir est mis à l'épreuve dans un défi spectaculaire. Les points sont attribués par le forestier — l'autorité incontestable de l'épisode.",
+            title: 'Acte 3 — Le défi',
+            text: "Le savoir appris est immédiatement mis à l'épreuve dans un défi spectaculaire ancré dans la réalité forestière. Les points sont attribués par le forestier — l'autorité incontestable de l'épisode.",
           },
           {
-            title: 'Acte 4 — La révélation',
-            text: "L'objet reçu à l'arrivée prend enfin son sens. Le secret de cette forêt se dévoile. C'est le moment émotionnel fort — celui qu'on partage, qu'on commente, qu'on n'oublie pas.",
+            title: 'Acte 4 — Le classement',
+            text: "Les points s'accumulent sur toute la saison. À la fin de l'épisode, le candidat avec le score le plus bas change de rôle : il devient l'assistant du forestier local pour les épisodes suivants.",
           },
         ],
       },
@@ -287,7 +287,7 @@ export const slides: Slide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Les éliminés des épisodes précédents — devenus assistants des forestiers — jouent un rôle dans le final. Leur connaissance des secrets de chaque forêt peut aider ou compliquer la tâche des finalistes.',
+        text: 'Les éliminés des épisodes précédents — devenus assistants des forestiers — jouent un rôle dans le final. Leur expérience terrain, acquise forêt après forêt, peut aider ou compliquer la tâche des finalistes.',
       },
       {
         kind: 'highlight',
@@ -314,7 +314,7 @@ export const slides: Slide[] = [
         items: [
           {
             title: "Rétention sur l'épisode",
-            text: "L'objet mystérieux remis à l'arrivée retient le spectateur jusqu'à la révélation finale.",
+            text: "Le savoir enseigné crée une tension narrative claire : est-ce que la personnalité va réussir le défi ? Le spectateur reste jusqu'au score final.",
           },
           {
             title: 'Fidélité sur la saison',
@@ -322,7 +322,7 @@ export const slides: Slide[] = [
           },
           {
             title: 'Partage organique',
-            text: 'Chaque épreuve spectaculaire est un Short potentiel. Chaque révélation est un moment partageable.',
+            text: 'Chaque défi spectaculaire est un Short potentiel. Chaque performance inattendue est un moment partageable.',
           },
           {
             title: 'Communauté',
