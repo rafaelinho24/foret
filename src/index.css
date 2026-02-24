@@ -24,6 +24,20 @@
 
   --font-family-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Forest typography — Le Dernier Forestier */
+  --font-family-title: 'Bebas Neue', sans-serif;
+  --font-family-serif-display: 'DM Serif Display', serif;
+  --font-family-dm: 'DM Sans', sans-serif;
+
+  /* Forest colour palette */
+  --color-forest-black: #080c08;
+  --color-forest-deep: #0d140d;
+  --color-forest: #1a2e1a;
+  --color-forest-moss: #2d4a2d;
+  --color-forest-sage: #4a7a4a;
+  --color-forest-lime: #c8f53c;
+  --color-forest-cream: #f0ead6;
 }
 
 /* Light mode override (warm concrete gray — classe2 style) */

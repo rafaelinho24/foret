@@ -7,38 +7,34 @@ import { Route, Routes } from 'react-router-dom';
 /* ─── Lazy loading — each page is a separate chunk ─────────────
    Pattern: const PageName = lazy(() => import('@pages/PageName'))
    ──────────────────────────────────────────────────────────── */
-const Home = lazy(() => import('@pages/Home'));
+// WHY: Presentation is outside RootLayout — full-screen experience, no Header/Footer
+const PresentationPage = lazy(() => import('@pages/Presentation'));
 const Playground = lazy(() => import('@pages/Playground'));
 const NotFound = lazy(() => import('@pages/NotFound'));
 
-/* ─── Loading fallback — themed, no white flash ───────────────── */
+/* ─── Loading fallback — dark, no white flash ─────────────────── */
 function PageLoader() {
   return (
-    <div className="bg-bg flex min-h-screen items-center justify-center">
+    <div className="bg-forest-black flex min-h-screen items-center justify-center">
       <Spinner size="sm" aria-label="Loading page" />
     </div>
   );
 }
 
-/* ─── Main router ─────────────────────────────────────────────
-   Page transition (animate-page-enter) lives in RootLayout around <Outlet />,
-   NOT here. Wrapping <Routes> with key={pathname} would remount the entire
-   layout (Header, Footer, contexts) on every navigation.
-   ─────────────────────────────────────────────────────────── */
+/* ─── Main router ─────────────────────────────────────────────── */
 export default function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
-        {/* Root layout — wraps ALL pages with Header + Footer */}
+        {/* Presentation — no layout wrapper (full-screen, no Header/Footer) */}
+        <Route path={ROUTES.HOME} element={<PresentationPage />} />
+
+        {/* Playground — inside layout for dev convenience */}
         <Route element={<RootLayout />}>
-          <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.PLAYGROUND} element={<Playground />} />
-          {/* Add routes here: */}
-          {/* <Route path={ROUTES.ABOUT} element={<About />} /> */}
-          {/* <Route path={ROUTES.PROJECT} element={<ProjectDetail />} /> */}
         </Route>
 
-        {/* 404 — outside layout for a blank page if needed */}
+        {/* 404 */}
         <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
       </Routes>
     </Suspense>
