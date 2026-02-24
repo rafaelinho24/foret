@@ -1,0 +1,119 @@
+{
+  "name": "steaksoap",
+  "version": "2.7.0",
+  "type": "module",
+  "description": "AI-first React starter kit for vibe coders. React 19 + TypeScript + Vite 7 + Tailwind CSS 4 with Claude Code commands, agents, and automated workflow.",
+  "author": "mitambuch",
+  "license": "MIT",
+  "homepage": "https://github.com/mitambuch/steaksoap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitambuch/steaksoap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitambuch/steaksoap/issues"
+  },
+  "keywords": [
+    "steaksoap",
+    "react",
+    "vite",
+    "tailwindcss",
+    "typescript",
+    "starter",
+    "template",
+    "ai-first",
+    "vibe-coding",
+    "claude-code",
+    "cursor",
+    "copilot",
+    "react19",
+    "tailwind4"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "node scripts/setup-bootstrap.js --check",
+    "prepare": "husky",
+    "setup": "node scripts/setup-bootstrap.js",
+    "setup:update": "node scripts/setup.js --update",
+    "release": "node scripts/release.js",
+    "release:patch": "node scripts/release.js patch",
+    "release:minor": "node scripts/release.js minor",
+    "release:major": "node scripts/release.js major",
+    "doctor": "node scripts/doctor.js",
+    "done": "node scripts/done.js"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.575.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.12.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@clack/prompts": "^1.0.1",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@eslint/js": "^9.39.1",
+    "@release-it/conventional-changelog": "^10.0.5",
+    "@tailwindcss/vite": "^4.2.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "jsdom": "^28.1.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.5.0",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "release-it": "^19.2.4",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-sitemap": "^0.8.2",
+    "vitest": "^4.0.18",
+    "vitest-axe": "^0.1.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ],
+    "overrides": {
+      "minimatch": ">=10.2.1"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.28.0"
+}

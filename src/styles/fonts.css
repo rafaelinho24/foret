@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════════════════════
+   FONTS — local font declarations (currently placeholder)
+
+   This file is a template for self-hosted fonts.
+   By default, steaksoap loads fonts from Google Fonts in index.html.
+   If you want to self-host fonts for better privacy/performance:
+   1. Download .woff2 files into /public/fonts/
+   2. Uncomment and adapt the @font-face declarations below
+   3. Remove the Google Fonts <link> from index.html
+   ═══════════════════════════════════════════════════════════════
+
+   Naming convention:
+   - Regular   → YourFont-Regular.woff2
+   - Medium    → YourFont-Medium.woff2
+   - Bold      → YourFont-Bold.woff2
+   - Italic    → YourFont-Italic.woff2
+
+   Duplicate this template for each weight:
+*/
+
+/*
+@font-face {
+  font-family: 'YourFont';
+  src: url('/fonts/YourFont-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YourFont';
+  src: url('/fonts/YourFont-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*/

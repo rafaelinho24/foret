@@ -1,0 +1,192 @@
+@import 'tailwindcss';
+@import './styles/fonts.css';
+@import './styles/animations.css';
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME — design tokens → Tailwind utilities
+   bg-bg, text-fg, text-accent, font-sans, font-mono, etc.
+   ═══════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* Dark mode — DEFAULT (classe2 "brutaliste suisse") */
+  --color-bg: #0a0a0a;
+  --color-fg: #f0f0f0;
+  --color-accent: #ff6b6b;
+  --color-muted: #8a8a8a;
+  --color-surface: #141414;
+  --color-border: #262626;
+
+  /* Semantic status colors — fluorescent */
+  --color-success: #6aff8a;
+  --color-warning: #ffd60a;
+  --color-danger: #dc2626;
+  --color-info: #52b0ff;
+
+  --font-family-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Light mode override (warm concrete gray — classe2 style) */
+[data-theme='light'] {
+  --color-bg: #b0b0a8;
+  --color-fg: #1a1a1a;
+  --color-accent: #ff6b6b;
+  --color-muted: #4a4a44;
+  --color-surface: #a4a49c;
+  --color-border: #96968e;
+
+  --color-success: #00c853;
+  --color-warning: #e6a800;
+  --color-danger: #b91c1c;
+  --color-info: #1e88e5;
+}
+
+/* ─── Custom scrollbar — thin coral accent ────────────────── */
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 107, 0.5);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 107, 0.7);
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 107, 0.5) transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   APP TOKENS — CSS variables for direct use (not Tailwind utils)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+
+  --z-below: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+  --z-cursor: 9999;
+}
+
+/* ─── Transition presets ─────────────────────────────────── */
+.transition-theme {
+  transition:
+    background-color 1.5s ease,
+    color 1.5s ease,
+    border-color 1.5s ease;
+}
+.transition-smooth {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Global styles ────────────────────────────────────────── */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* a11y: cursor-hidden is showcase-only, removed by pnpm setup */
+.cursor-hidden,
+.cursor-hidden * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ─── Custom utilities ─────────────────────────────────────── */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@utility animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ─── Film grain ──────────────────────────────────────────── */
+
+@keyframes noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10%, 10%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-noise {
+  animation: noise 0.35s steps(2) infinite;
+}
+
+/* ─── Electric CTA — violet shimmer for wizard buttons ────── */
+
+.btn-electric {
+  --violet: #a855f7;
+  --violet-glow: rgba(168, 85, 247, 0.4);
+  position: relative;
+  border-color: color-mix(in srgb, var(--violet) 40%, transparent);
+  background: color-mix(in srgb, var(--violet) 8%, transparent);
+  color: var(--violet);
+  overflow: hidden;
+}
+
+/* WHY: Shimmer sweep — subtle light passing through the button */
+.btn-electric::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    color-mix(in srgb, var(--violet) 15%, transparent) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: electric-shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.btn-electric:hover {
+  border-color: color-mix(in srgb, var(--violet) 60%, transparent);
+  background: color-mix(in srgb, var(--violet) 12%, transparent);
+  box-shadow:
+    0 0 20px var(--violet-glow),
+    0 0 40px color-mix(in srgb, var(--violet-glow) 50%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-electric::before {
+    animation: none;
+  }
+}
