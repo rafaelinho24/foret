@@ -121,11 +121,11 @@ export const slides: Slide[] = [
         items: [
           {
             title: 'La saison',
-            text: '8 personnalités romandes · 6 épisodes — 6 forêts — 6 cantons · 1 épreuve par épisode liée à un vrai métier forestier · Points cumulatifs sur toute la saison · Élimination progressive · 1 épisode final — épreuve ultime',
+            text: '8 personnalités romandes · 6 épisodes — 6 forêts — 6 cantons · 1 épreuve par épisode liée à un vrai métier forestier · Tous les candidats participent aux 6 épisodes · Points cumulatifs sur toute la saison · 1 épisode final — épreuve ultime',
           },
           {
-            title: "Le système d'élimination",
-            text: "À la fin de chaque épisode, le candidat avec le score le plus bas est éliminé de la compétition — mais pas de la série. Il change de rôle : il devient l'assistant du forestier local. Dans une forêt, personne n'est inutile. Tout le monde a un rôle dans l'écosystème.",
+            title: 'Le système de points',
+            text: "À chaque épisode, les points sont attribués selon la performance de chacun. Il n'y a pas d'élimination. Le classement évolue au fil des 6 épreuves. Le gagnant est celui qui a accumulé le plus de points à l'issue du final.",
           },
         ],
       },
@@ -157,7 +157,7 @@ export const slides: Slide[] = [
           },
           {
             title: 'Acte 4 — Le classement',
-            text: "Les points s'accumulent sur toute la saison. À la fin de l'épisode, le candidat avec le score le plus bas change de rôle : il devient l'assistant du forestier local pour les épisodes suivants.",
+            text: "Les points s'accumulent sur toute la saison. Le classement est mis à jour. Chaque épisode fait évoluer les positions — jusqu'à l'épreuve finale qui sacre le Dernier Forestier.",
           },
         ],
       },
@@ -279,7 +279,7 @@ export const slides: Slide[] = [
     content: [
       {
         kind: 'paragraph',
-        text: "Le final réunit les candidats encore en compétition dans une forêt d'exception. Aucun savoir n'est enseigné. Parce que tout a déjà été appris.",
+        text: "Le final réunit les 8 candidats dans une forêt d'exception. Aucun savoir n'est enseigné. Parce que tout a déjà été appris.",
       },
       {
         kind: 'paragraph',
@@ -287,7 +287,7 @@ export const slides: Slide[] = [
       },
       {
         kind: 'paragraph',
-        text: 'Les éliminés des épisodes précédents — devenus assistants des forestiers — jouent un rôle dans le final. Leur expérience terrain, acquise forêt après forêt, peut aider ou compliquer la tâche des finalistes.',
+        text: "Le candidat avec le plus de points à l'issue de l'épreuve finale est couronné Dernier Forestier.",
       },
       {
         kind: 'highlight',

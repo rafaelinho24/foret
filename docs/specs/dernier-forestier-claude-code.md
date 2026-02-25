@@ -230,14 +230,12 @@ Le forestier n'est pas un guide touristique. Il est l'autorité absolue.
 - 8 personnalités romandes
 - 6 épisodes — 6 forêts — 6 cantons
 - 1 savoir forestier réel par épisode
+- Tous les candidats participent aux 6 épisodes
 - Points cumulatifs sur toute la saison
-- Élimination progressive
 - 1 épisode final — épreuve ultime
 
-**Le système d'élimination :**
-À la fin de chaque épisode, le candidat avec le score le plus bas est éliminé de la compétition — mais pas de la série. Il change de rôle. Il devient l'assistant du forestier local dans les épisodes suivants.
-
-*Dans une forêt, personne n'est inutile. Tout le monde a un rôle dans l'écosystème.*
+**Le système de points :**
+À chaque épisode, les points sont attribués selon la performance de chacun. Il n'y a pas d'élimination. Le classement évolue au fil des 6 épreuves. Le gagnant est celui qui a accumulé le plus de points à l'issue du final.
 
 ---
 
@@ -255,7 +253,7 @@ Le forestier local prend les commandes. Il enseigne un vrai savoir du métier �
 Le savoir appris est immédiatement mis à l'épreuve dans un défi spectaculaire ancré dans la réalité forestière. Les points sont attribués par le forestier — l'autorité incontestable de l'épisode.
 
 **Acte 4 — Le classement**
-Les points s'accumulent sur toute la saison. À la fin de l'épisode, le candidat avec le score le plus bas change de rôle : il devient l'assistant du forestier local pour les épisodes suivants.
+Les points s'accumulent sur toute la saison. Le classement est mis à jour. Chaque épisode fait évoluer les positions — jusqu'à l'épreuve finale qui sacre le Dernier Forestier.
 
 ---
 
@@ -324,11 +322,11 @@ Chaque épreuve doit être filmable en 30 secondes et donner envie de regarder l
 
 **Titre :** L'épreuve ultime.
 
-Le final réunit les candidats encore en compétition dans une forêt d'exception. Aucun savoir n'est enseigné. Parce que tout a déjà été appris.
+Le final réunit les 8 candidats dans une forêt d'exception. Aucun savoir n'est enseigné. Parce que tout a déjà été appris.
 
 L'épreuve finale convoque simultanément les six savoirs des six épisodes précédents. Lecture du terrain, techniques d'abattage, gestion des risques, connaissance de la faune et de la flore, travail d'équipe en conditions réelles.
 
-Les éliminés des épisodes précédents — devenus assistants des forestiers — jouent un rôle dans le final. Leur expérience terrain, acquise forêt après forêt, peut aider ou compliquer la tâche des finalistes.
+Le candidat avec le plus de points à l'issue de l'épreuve finale est couronné Dernier Forestier.
 
 Le candidat couronné devient le **Dernier Forestier**.
 
