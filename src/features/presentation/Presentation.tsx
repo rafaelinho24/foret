@@ -121,19 +121,24 @@ export const Presentation = ({ className }: PresentationProps) => {
   }
 
   return (
-    // WHY: full-screen black wrapper creates letterbox bars on non-16:9 screens
+    // WHY: relative + overflow-hidden on outer prevents layout overflow.
+    // scale() only affects visual rendering, not layout — flex centering alone
+    // causes horizontal scrollbars when viewport < 1280px wide.
     <div
       ref={wrapperRef}
-      className={cn('flex h-screen w-screen items-center justify-center bg-black', className)}
+      className={cn('relative h-screen w-screen overflow-hidden bg-black', className)}
     >
-      {/* Fixed-size 16/9 slide container */}
+      {/* Fixed-size 16/9 slide — absolutely centered, scaled to fit */}
       <div
         style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
           width: `${SLIDE_W}px`,
           height: `${SLIDE_H}px`,
-          transform: `scale(${scale})`,
-          transformOrigin: 'center center',
-          position: 'relative',
+          // WHY: translate(-50%,-50%) centers the layout box at the viewport center,
+          // then scale() shrinks/grows it visually without affecting layout flow.
+          transform: `translate(-50%, -50%) scale(${scale})`,
           overflow: 'hidden',
         }}
       >
