@@ -58,7 +58,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.12.0",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@clack/prompts": "^1.0.1",
